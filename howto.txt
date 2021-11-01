@@ -1,0 +1,1 @@
+I would start by generation an ssh keypair, then i would add the ARG keyword to my dockerfile so i can pass in the private key at build time. This private key would be added to ~/.ssh/id_rsa, then i would upload the public key to bitbucket after which i would be able to clone the repositry over ssh
