@@ -1,0 +1,9 @@
+- hosts: all
+  gather_facts: true
+  tasks:
+    - name: create cron
+      cron:
+        name: "echo hello world"
+        minute: "0"
+        hour: "5,2"
+        job: "echo hello world $(date) > hello.txt"
